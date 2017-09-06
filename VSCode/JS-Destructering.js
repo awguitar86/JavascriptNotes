@@ -80,3 +80,4 @@ through destructuring. Set the value of students to be 24, mentors to be 3, and 
 var {students, mentors, instructors} = {students:24, mentors:3, instructors:5};
 
 console.log(students, mentors, instructors);
+

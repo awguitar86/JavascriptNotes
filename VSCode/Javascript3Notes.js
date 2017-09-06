@@ -38,9 +38,9 @@ var rose = new Flower('red');
 
 var lilac = new Flower('purple');
 
-rose.bloom(); //because rose is to the left of the .bloom it now become the value of "this" in the bloom function.
+rose.bloom(); //because rose is to the left of the .bloom it now becomes the value of "this" in the bloom function.
 
-lilac.blossomed //this is flase because it is in the original Flower function and not in the .bloom function.
+lilac.blossomed //this is false because it is in the original Flower function and not in the .bloom function.
 
 //Here is another example
 Array.prototype.firstItem = function(){

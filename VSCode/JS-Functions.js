@@ -27,4 +27,27 @@ return num;
 }
 myLoop(60, 100);  //returns 160
 
+/*Create a function called exponent that takes in two parameters. The first parameter should represent a number to be 
+multiplied against itself and the second parameter should represent how many times it is multiplied by itself. 
+The function should return the result of this operation. */
+function exponent(num, inc) {
+  var answer = num;
+  for(var i = 1; i < inc; i++) {
+    answer *= num;
+  }
+  return answer;
+}
+exponent(5, 3); //returns 125
 
+
+//Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+function doubleChar(str) {
+  var  string = '';
+   for(var i = 0; i < str.length; i++) {
+     string = string + str[i] + str[i];
+   }
+   return string;
+ }
+ doubleChar("CoolBeans");
+
+ 

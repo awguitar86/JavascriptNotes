@@ -81,3 +81,22 @@ var {students, mentors, instructors} = {students:24, mentors:3, instructors:5};
 
 console.log(students, mentors, instructors);
 
+//Destructuring 1.3 problem 1
+/*Intro
+Object destructuring allows you to "unpack" properties from objects and assign them to variables. 
+An example of this is the object numbers as seen in the code. On line 9, variables one, two and three 
+are receiving the property values from the numbers object. If you uncomment and run the code, it will 
+print to the console '1 2 3'.
+Problem
+Here you are given the object animalCount. Destructure this object so that you have 3 distinct variables
+ with the values of the matching properties from animalCount.*/
+ var animalCount = {
+  cats: 2,
+  dogs: 5,
+  mice: 0
+}
+
+var {cats, dogs, mice} = animalCount;
+
+console.log(cats, dogs, mice);
+

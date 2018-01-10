@@ -171,3 +171,49 @@ function changeEmail(array, value, newEmail) {
     
     return array;
 }
+
+//ARRAY: Fill empty array with strings
+/*Instructions
+For loops are especially useful when combined with arrays. 
+Create an empty array called myArray 
+Then create a function called arrayFiller that takes one parameter (the parameter will be a number). 
+hen fill myArray with the string "item" the number of times indicated by the parameter. 
+Return the filled array. 
+For example if I were to call arrayFiller(2) I would expect the return value to be ["item","item"] . */
+var myArray = [];
+function arrayFiller (num) {
+  for(var i = 0; i < num; i++) {
+    myArray.push('item');
+  }
+  return myArray;
+}
+arrayFiller(3);
+
+//ARRAY: Create Array and Fill with Numbers
+/*Instructions
+Write a function called 'maker' that creates an array and fills that array with numbers 1 to 25, then returns the array.
+*/
+function maker() {
+  var arr = [];
+  for(var i = 0; i < 25; i++){
+    arr[i] = i + 1;
+  }
+    return arr;
+}
+maker();
+
+//ARRAY: Increment numbers in array by 5
+/*Instructions
+Create a function called "looper" that when passed an array of numbers will increment each value in the array by 5 
+and then return the updated array.*/
+var numbers = [10, 20, 30, 40, 50, 60];
+function looper(numbers) {
+  newNum = [];
+  for(var i = 0; i < numbers.length; i++) {
+    newNum.push(+numbers[i] + 5);
+  }
+  return newNum;
+}
+looper(numbers);
+
+ 

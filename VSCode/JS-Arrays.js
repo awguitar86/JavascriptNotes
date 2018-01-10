@@ -127,6 +127,27 @@ function addItem(myGroceryList, item){
 removeItem(["flour", "sugar", "apples"], "flour");
 addItem(["flour", "sugar", "apples"], "cake");
 
+//Or you can do it this way
+function removeItem (myGroceryList, item) {
+  for(var i = 0; i < myGroceryList.length; i++){
+    if(myGroceryList[i] === item) {
+      myGroceryList.splice(i, 1);
+      i--;
+    }
+  }
+  return myGroceryList;
+}
+function addItem (myGroceryList, item) {
+  for(var i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList.indexOf(item) < 0) {
+      myGroceryList.push(item);
+    }
+  }
+  return myGroceryList;
+}
+removeItem (['milk', 'bread', 'butter', 'cereal'], 'milk');
+addItem (['milk', 'bread', 'butter', 'cereal'], 'candy');
+
 
 //Add Ten to given numbers in an Array
 /*Write a function called addTen that is given 'numbers' as it's only argument and returns a 

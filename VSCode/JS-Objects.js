@@ -49,6 +49,12 @@ function changeEmail (user, newEmail) {
  return user;
 }
 changeEmail(user, "rumpelstiltskin@gmail.com");
+//Or do it this way
+function changeEmail(user, newEmail) {
+  user.email = newEmail;
+  return user;
+}
+changeEmail({name:"Giff", email:'giffygiff@gmail.com'}, 'gifford@gmail.com');
 
 //Change User Object Role in a Function
 /*Create a function called addRole that takes in a user object and a string. 

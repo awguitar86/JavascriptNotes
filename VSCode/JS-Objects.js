@@ -91,8 +91,8 @@ Loop through all the properties of the object and set each value to "Unknown", t
 For example, if "person" is {name: "Dolph L.", age: 33} then the function would return {name: "Unknown", age: “Unknown"}.*/
 var person = {name:"Sheldon Cooper", age:35, gender: "male", job:"Physicist"}
 function unknownPerson(person){
-  for (var prop in person){
-    if (person.hasOwnProperty(prop)){
+  for (var prop in person){ // for/in loops through object 
+    if (person.hasOwnProperty(prop)){ // hasOwnProperty method returns a boolean indicating whether the object has the specified property as own (not inherited) property.
       person[prop] = "Unknown";
     }
   }
@@ -105,16 +105,15 @@ unknownPerson(person);
 This function should loop through the user object checking to make sure that each of its values is truthy. 
 If a value is not truthy then remove it from the object. 
 Return the updated object after looping through it.*/
-var user = {name:"Dwight", age:45, job:false};
 function truthyObject (user){
-  for (var key in user){
-    if (!user[key]){
-      delete user[key];
+  for (const prop in user){
+    if (!user[prop]){ //need to use brackets when doing this type of function and if statement.
+      delete user[prop];
       }
   }
   return user;
 }
-truthyObject(user);
+truthyObject({name:"Dwight", age:45, job:false});
 
 //Loop Through Object and Change values
 /*Below we have a function called objectLooper that will take a number object and loop over it. 

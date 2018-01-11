@@ -31,6 +31,13 @@ function canDrive(person){
   }
 }
 canDrive({name:"Howard", age:15});
+//Or do it this way with a ternary
+function canDrive(person) {
+  var oldEnough = person.age >= 16 ? person.name + " is old enough to drive." : person.name + " is not old enough to drive.";
+  return oldEnough;
+}
+canDrive({name:"Ted", age: 32});
+
 
 //Change Email Function with User Object
 /*Create a function called changeEmail that takes in a user object and a newEmail string. 

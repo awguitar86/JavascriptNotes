@@ -42,7 +42,7 @@ canDrive({name:"Ted", age: 32});
 //Change Email Function with User Object
 /*Create a function called changeEmail that takes in a user object and a newEmail string. 
 Replace the user's current email address (assigned to the email property) with the newEmail 
-string, then return the updated user object.*/\
+string, then return the updated user object.*/
 var user = {name: "Rumpelstiltskin", email: "guessmyname@gmail.com"};
 function changeEmail (user, newEmail) {
  user.email = newEmail;
@@ -190,7 +190,7 @@ function updateEmail(obj, str) {
     obj.email = str;
     return obj.email
 }
-updateEmail(obj, “awesome@gmail.com");
+updateEmail(obj, 'awesome@gmail.com');
 
 
 //Object: Check if person object is old enough

@@ -67,12 +67,12 @@ function addRole(user, string){
   return user;
 }
 addRole(user, "hero");
-//Or do it this way
+//Or do it this way and it will automatically add the role property to the object.
 function addRole(user, string){
   user.role = string;
   return user;
 }
-addRole({name:"Tobias", role:""}, "musician");
+addRole({name:"Tobias"}, "musician");
 
 //Remove Role Object Property with Function
 /*Create a function called removeRole that takes in a user object. 

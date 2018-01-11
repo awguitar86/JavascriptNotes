@@ -1,6 +1,6 @@
-//FUNCTIONS
+// FUNCTIONS //
 
-//Reverse a String
+//REVERSE A STRING
 /*Write a function called 'reverse' with one parameter (string) 
 The function should return that string after it's been reversed.
 For example, if the passed in string is "this is my sentence", the function should return "ecnetnes ym si siht”*/
@@ -11,9 +11,19 @@ function reverse(string){
   }
   return newStr;
 }
-reverse("this is my sentence”);
+reverse('this is my sentence');
 
-//For Loop Incrementing
+// * Or you can do it this way *
+// The split() method splits a String object into an array of string by separating the string into sub strings.
+// The reverse() method reverses an array in place. The first array element becomes the last and the last becomes the first.
+// The join() method joins all elements of an array into a string.
+function reverse (string) {
+  return string.split("").reverse().join("");
+}
+reverse("james austin");
+
+
+// FOR LOOP INCREMENTING
 /*•	Create a function called myLoop that takes in two parameters. 
 •	The first parameter should represent a starting number and the second is how many times the starting number should be incremented.  
 •	Use a for loop to increment the first parameter a number of times equal to the second parameter. Then return the modified number. 

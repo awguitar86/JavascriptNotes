@@ -237,4 +237,17 @@ function looper(numbers) {
 }
 looper(numbers);
 
- 
+
+//backWards Array:
+//Below we have a function that will loop over an array in reverse. 
+//What you need to do is add the index to the newArray on every iteration
+function backWards(arr) {
+  var newArray = [];
+     for (var i = arr.length - 1; i >= 0; i--) {
+       
+        newArray.push(i);// Code here 
+     }
+  return newArray;
+ }
+
+backWards([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);

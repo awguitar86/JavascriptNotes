@@ -268,3 +268,19 @@ return answer;
 }
 
 findInArray([1, 2, 3, 4, 5], 6);
+
+
+/* Parse string to integer and addTen */
+//This problem is the same as the previous problem, the only difference is that we have both strings and integers in 
+//our numbers array. You will need to parse the strings into integers before you add ten.
+function addTen(arr) {
+  newArr = [];
+  for(var i = 0; i < arr.length; i++) {
+    var newItem = parseInt(arr[i]) + 10;
+    newArr.push(newItem);
+  }
+  return newArr;
+}
+addTen([1, "2", 3, 4, "5", "6", 7, "8"]);
+
+

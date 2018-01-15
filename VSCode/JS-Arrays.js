@@ -283,4 +283,16 @@ function addTen(arr) {
 }
 addTen([1, "2", 3, 4, "5", "6", 7, "8"]);
 
+/* deleteUser object from array of objects */
+//Imagine a world where you have an array of user objects, and you need to delete one of those users. 
+//Inside your if statement, remove the object from the array of objects.
+function deleteUser(array, property, value) {
+  for(var i = 0; i < array.length; i++) {
+      if(array[i][property] === value) {
+          array.splice( i, 1);// Code Here 
+      }
+  }
+ return array;
+}
+deleteUser([{name: "jon", age: 40}, {name: "Tim", age: 50}, {name: "James", age: 21}], "age", 21);
 

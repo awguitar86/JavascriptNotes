@@ -238,7 +238,7 @@ function looper(numbers) {
 looper(numbers);
 
 
-//backWards Array:
+/* backWards Array */
 //Below we have a function that will loop over an array in reverse. 
 //What you need to do is add the index to the newArray on every iteration
 function backWards(arr) {
@@ -251,3 +251,20 @@ function backWards(arr) {
  }
 
 backWards([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+
+/* findInArray */
+//Below we have a  function called 'findInArray' that takes in two parameters, the first representing the 
+//array to be searched and the second representing the value to be searched for. Return true if the array has the value
+function findInArray(arr, value) {
+  answer = false;
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] === value){
+        answer = true;
+        break;
+      }
+  }// Code Here 
+return answer;
+}
+
+findInArray([1, 2, 3, 4, 5], 6);

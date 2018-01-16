@@ -296,3 +296,23 @@ function deleteUser(array, property, value) {
 }
 deleteUser([{name: "jon", age: 40}, {name: "Tim", age: 50}, {name: "James", age: 21}], "age", 21);
 
+
+/* Update User Object Email */
+//Inside your if statement, update the user's email property to the newEmail being passed in.
+function updateUserEmail(array, property, value, newEmail) {
+  for(var i = 0; i < array.length; i++) {
+      if(array[i][property] === value) {
+        array[i][property] = newEmail;// Code Here 
+      }
+  }
+  return array;
+}
+updateUserEmail([
+    {name: "Jon", email: "jon@gmail.com"},
+    {name: "Tim", email: "tim@gmail.com"},
+    {name: "George", email: "george@gmail.com"}], 
+    "email", 
+    "tim@gmail.com", 
+    "timtimtimmy@gmail.com");
+
+    

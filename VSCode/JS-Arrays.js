@@ -327,12 +327,15 @@ function changePassword(array, property, value, newPassword) {
   }
   return array;
 }
-changePassword([
-  {name: "jon", password: "12345"},
-  {name: "tim", password: "98765"},],
+changePassword(
+  [{name: "jon", password: "12345"},{name: "tim", password: "98765"},],
   "password",
   "12345",
   "coolBeans"
   );
 
 
+/* Update Email property in Array of Objects */
+//This is another way to find the index of a property in an array of objects.
+//The array parameter is an array of objects. 
+//Using the array parameter and the index variable, update the object email address (.email or ["email"]) to be the newEmail parameter.

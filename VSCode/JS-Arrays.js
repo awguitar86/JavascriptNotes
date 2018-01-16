@@ -315,4 +315,24 @@ updateUserEmail([
     "tim@gmail.com", 
     "timtimtimmy@gmail.com");
 
-    
+
+/* Change Password in array of Objects */
+//On each iteration, check the array index for a property that is equal to the value being passed in. 
+//If that condition is met, change the object's password property value to equal newPassword.
+function changePassword(array, property, value, newPassword) {
+  for(var i = 0; i < array.length; i++ ) {
+      if(array[i][property] === value){
+        array[i][property] = newPassword;
+      }// Code Here 
+  }
+  return array;
+}
+changePassword([
+  {name: "jon", password: "12345"},
+  {name: "tim", password: "98765"},],
+  "password",
+  "12345",
+  "coolBeans"
+  );
+
+

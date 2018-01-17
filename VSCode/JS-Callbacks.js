@@ -45,6 +45,19 @@ var drinkSoda = () => {
   return "Come back when you are legally allowed a drink!"
 }
 canDrink(23);
+// Or do it this way
+var drinkSoda = () => {
+  return "Come back when you are legally allowed a drink!"
+}
+var drinkAlcohol = () => {
+  return "Drink responsibly!"
+}
+var canDrink = (age, cb1, cb2) => {
+  var oldEnough = age >= 21 ? cb2() : cb1();
+  return oldEnough;
+}
+canDrink(22, drinkSoda, drinkAlcohol);
+
 
 //Callback Problem 4
 /*Write two functions, one called add and one called multiply, that each takes in two numbers and returns the appropriate new value.

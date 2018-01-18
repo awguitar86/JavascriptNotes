@@ -58,7 +58,6 @@ var canDrink = (age, cb1, cb2) => {
 }
 canDrink(22, drinkSoda, drinkAlcohol);
 
-
 //Callback Problem 4
 /*Write two functions, one called add and one called multiply, that each takes in two numbers and returns the appropriate new value.
 Write a function called math that takes in two numbers, and a function 'operator' as parameters.

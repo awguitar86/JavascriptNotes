@@ -339,3 +339,21 @@ changePassword(
 //This is another way to find the index of a property in an array of objects.
 //The array parameter is an array of objects. 
 //Using the array parameter and the index variable, update the object email address (.email or ["email"]) to be the newEmail parameter.
+
+
+/* RETURN DUPLICATES IN AN ARRAY */
+//Write a function that takes two arrays and returns the matching numbers in both of those arrays.
+const arr1 = [1, 2, 3, 4];
+const arr2 = [2, 4, 5, 6];
+
+const both = (arr1, arr2) => {
+  const arr3 = arr1.concat(arr2);
+  const newArr = [];
+  arr3.forEach((elem, index) => {
+    if(arr3.indexOf(elem, index + 1) > -1) {
+      newArr.push(elem);
+    }
+  })
+  return newArr;
+}
+both(arr1, arr2);

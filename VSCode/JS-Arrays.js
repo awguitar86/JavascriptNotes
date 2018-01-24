@@ -341,6 +341,8 @@ changePassword(
 //Using the array parameter and the index variable, update the object email address (.email or ["email"]) to be the newEmail parameter.
 
 
+
+
 /* RETURN DUPLICATES IN AN ARRAY */
 //Write a function that takes two arrays and returns the matching numbers in both of those arrays.
 const arr1 = [1, 2, 3, 4];

@@ -16,17 +16,19 @@ var Charles = new Puppy(100, 200, 300);
 The first property should be called manufacturer and the second property should be called year.
 The class should also have a method called displayManufacturer that returns the manufacturer.
 It should also have a method called displayYear that returns the year.*/
-function Car (manufacturer, year){
-    this.manufacturer = manufacturer;
-    this.year = year;
-  }
+class Car {
+    constructor(manufacturer, year){
+      this.manufacturer = manufacturer;
+      this.year = year;
+    }
   
-  Car.prototype.displayManufacturer = function(){
-    return this.manufacturer;
-  }
-  
-  Car.prototype.displayYear = function(){
-    return this.year;
+    displayManufacturer(manufacturer){
+      return this.manufacturer;
+    }
+    
+    displayYear(year){
+      return this.year;
+    }
   }
   // code here
   var BillysFirstCar = new Car('Tesla', 2017)

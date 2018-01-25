@@ -129,7 +129,6 @@ class Tree {
         this.height = height;
         this.food = 'photosynthesis';
     }
-
     grow(){
         this.height++;
     }

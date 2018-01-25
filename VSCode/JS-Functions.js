@@ -73,3 +73,17 @@ function noSpace(x){
   return x.split(' ').join('');
 }
 noSpace('coo lio dude'); //return 'cooliodude'
+
+
+/* CHANGE A NUMBER INTO A STRING */
+function numberToString(num) {
+  var numParse = num.toString();
+  return numParse;
+}
+numberToString(2849);
+
+//Or do it this way
+var numberToString = (num) => num.toString();
+
+numberToString(1234);
+

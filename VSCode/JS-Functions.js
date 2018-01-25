@@ -53,10 +53,10 @@ exponent(5, 3); //returns 125
 //Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
 function doubleChar(str) {
   var  string = '';
-   for(var i = 0; i < str.length; i++) {
+  for(var i = 0; i < str.length; i++) {
      string = string + str[i] + str[i];
-   }
-   return string;
+  }
+  return string;
  }
  doubleChar("CoolBeans");
 

@@ -59,6 +59,11 @@ function doubleChar(str) {
   return string;
  }
  doubleChar("CoolBeans");
+//Or do it this way
+const doubleChar = (str) => str.split("").map(c => c + c).join("");
+
+doubleChar('coolio!');
+
 
  
 /* REMOVE WHITE SPACE IN STRING */

@@ -61,3 +61,15 @@ function doubleChar(str) {
  doubleChar("CoolBeans");
 
  
+/* REMOVE WHITE SPACE IN STRING */
+//Simple, remove the spaces from the string, then return the resultant string.
+function noSpace(x){
+  return x.replace(/\s/g, '');
+}
+noSpace('cool beans'); //returns 'coolbeans'
+
+//Or you can do it this way
+function noSpace(x){
+  return x.split(' ').join('');
+}
+noSpace('coo lio dude'); //return 'cooliodude'

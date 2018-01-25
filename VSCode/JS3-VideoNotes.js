@@ -97,3 +97,24 @@ var obj2 = Object.assign({}, obj);
 obj.name = 'Joe'
 
 obj2.name //still equals 'Joseph' even though we changed obj.name to 'Joe'.
+
+
+/* OBJECTS - FOR IN LOOPS */
+for(var prop in myObj){
+    myObj[prop];
+}
+//for in loop: loop that runs a block of code of each of an object's own properties
+//the prop: create variable that will stand for each property key
+//the myObj: the object to loop through
+//the prop in brackets: the property key variable can be referred to inside the l;oop (use bracket notation).
+var employees = {
+    tom: 'designer',
+    chris: 'engineer',
+    james: 'developer'
+}
+var employeeNames = [];
+
+for(var prop in employees){
+    employeeNames.push[prop];
+}
+

@@ -118,3 +118,24 @@ for(var prop in employees){
     employeeNames.push[prop];
 }
 
+
+/* PROTOTPES AND CLASSES - CLASSES */
+//Javascript classes ate syntactical sugar for writing constructor functions and adding methods to the prototype
+//the constructor function takes in the parameters and assigns properties as usual
+//outside the constructor function, define any methods you want to add to the prototype
+//create new instances the same way you would with a constructor function
+class Tree {
+    constructor(height){
+        this.height = height;
+        this.food = 'photosynthesis';
+    }
+
+    grow(){
+        this.height++;
+    }
+}
+var oak = new Tree(10);
+
+oak.grow();
+
+oak

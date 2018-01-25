@@ -57,7 +57,7 @@ var myArray = ['first', 'second', 'third'];
 Array.prototype.pop = function(){
     return 'popcorn!';
 }
-/*Natyive Array Methods:
+/*Native Array Methods:
     .push()
     .unshift()
     .pop()
@@ -82,3 +82,18 @@ var daschund = new Dog();
 /*Invoke methods on prototype as if they were properties of the object itself. 
 Javscript will search first for a method in the object, then look to the prototype.*/
 daschund.bark();
+
+/* OBJECTS - COPYING WITH ASSIGN */
+Object.assign({}, obj1)
+//Object.assign: a method that copies all properties and values from source objects to target object.
+//The empty brackets is the target object. This object will be returned by the function.
+//The obj1 is the source object(s). The properties from this object will be copied to the target object.
+var obj = {
+    name: "Joseph"
+};
+
+var obj2 = Object.assign({}, obj);
+
+obj.name = 'Joe'
+
+obj2.name //still equals 'Joseph' even though we changed obj.name to 'Joe'.

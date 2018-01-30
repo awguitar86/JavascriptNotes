@@ -82,7 +82,7 @@ var solution = jobs.filter(obj => obj.programmer);
 var gemInfo = (type, size, color) => {
   return {gemType: type, gemSize: size, gemWeight: color};
 }
-gemInfo("crystal", 10, “blue");
+gemInfo("crystal", 10, "blue");
 
 
 //Arrow Function: Problem 9-return even numbers array

@@ -92,3 +92,31 @@ var numberToString = (num) => num.toString();
 
 numberToString(1234);
 
+
+/* REVERSE WORDS IN STRING BUT NOT WHOLE STRING */
+//Write a reverseWords function that accepts a string as a parameter, and reverses each word in the string. 
+//Any spaces in the string should be retained.
+function reverseWords(str) {
+  return str.split(' ').map((word) => {
+    return word.split('').reverse().join('')
+  }).join(' ');
+}
+reverseWords("May the force be with you");
+
+
+/* CHECK IF STRING IS AN ISOGRAM */
+//An isogram is a word that has no repeating letters, consecutive or non-consecutive.
+//Implement a function that determines whether a string that contains only letters is an isogram.
+// Assume the empty string is an isogram. Ignore letter case.
+function isIsogram(str){
+  var strCheck = str.toLowerCase();
+  for(var i = 0; i < strCheck.length; i++){
+    for(var x = i + 1; x < strCheck.length; x++){
+      if(strCheck[i] === strCheck[x]){
+        return false;
+      }
+    }
+  }
+  return true;
+}
+isIsogram("Amazing");

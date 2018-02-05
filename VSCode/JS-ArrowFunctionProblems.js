@@ -42,7 +42,7 @@ seven();
 // Your solution to Function 3 Here
 		var double = (num) => {
   		return num * 2;
-
+    }
 //Arrow Function: Multiply two parameters
 //Create an ES6 arrow function called multiply that will take in two parameters and return the product of the two parameters.
 var multiply = (num1, num2) => {
@@ -116,3 +116,10 @@ var numbers = [1, 2, 3, 4, 5];
 var productOfArray = (arr) => numbers.reduce((total, num) => total * num);
 
 productOfArray(numbers);
+
+/* Convert Binary to Integer */
+//Given an array of one's and zero's convert the equivalent binary value to an integer.
+//Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+const binaryArrayToNumber = (arr) => parseInt(arr.join(''), 2);
+
+binaryArrayToNumber([1, 0, 0, 0]);

@@ -2,7 +2,7 @@
 
 //Odds and Evens to an Array
 /*Write a function called "oddsAndEvens" that loops through a parameter "nums" (an array).
-For each number in the given array, if it is even, it is added to the evens array, if the 
+For each number in the given array, if it is even, it is added to the evens array, if the
 number is odd, is added to the odds array.*/
 var evens = []; // Do not edit this line.
 var odds = []; // Do not edit this line.
@@ -20,8 +20,8 @@ function oddsAndEvens(nums){
 oddsAndEvens([1,2,3,4,5,6,7,8,9]);
 
 //Even Finder of an Array
-/*Create a function called evenFinder that takes an array as an argument and returns 
-an array with all of the odd numbers removed.*/ 
+/*Create a function called evenFinder that takes an array as an argument and returns
+an array with all of the odd numbers removed.*/
 function evenFinder(arr){
   arrTwo = [];
   for (i = 0; i < arr.length; i++){
@@ -34,15 +34,15 @@ function evenFinder(arr){
 evenFinder([1,2,-3,4,5,6,7,-8,9])
 
 //Reverse Loop Array
-/*Create a function called 'reversedLooper' that will be passed one parameter, which will be an array. 
-The function will loop through the array backwards and do the following: 
+/*Create a function called 'reversedLooper' that will be passed one parameter, which will be an array.
+The function will loop through the array backwards and do the following:
 
-	•	Subtract 2 from the last element 
-	•	Subtract 1 from the second to last element 
-	•	Subtract 0 from to the third to last element 
+	•	Subtract 2 from the last element
+	•	Subtract 1 from the second to last element
+	•	Subtract 0 from to the third to last element
 	•	Add one to the fourth to last element
-	•	Add 2 to the fifth to last. 
-	•	Continue increasing the amount added by 1, until it reaches the front of the array.  
+	•	Add 2 to the fifth to last.
+	•	Continue increasing the amount added by 1, until it reaches the front of the array.
 
 Return the modified array when you are done*/
 function reversedLooper(arr){
@@ -57,8 +57,8 @@ reversedLooper([100, 50, 39, 300, 4]);
 
 
 //Find Element in Array
-/*Write a function called 'findInArray' that takes in two parameters. 
-The first parameter represents the array to be searched and the second parameter represents the value to be searched for. 
+/*Write a function called 'findInArray' that takes in two parameters.
+The first parameter represents the array to be searched and the second parameter represents the value to be searched for.
 Return true if the value exists in the array. If it doesn't exist return false.*/
 
 function findInArray(arr, num){
@@ -67,7 +67,7 @@ function findInArray(arr, num){
       if (arr[i] === num){
         answer = true;
         break;
-     } 
+     }
   }
   return answer;
 }
@@ -75,7 +75,7 @@ findInArray([1,2,3,4,5,6], 10);
 
 
 //Return Longer Array of Two Arrays
-/*You are provided some code that adds a set of random numbers to both arr1 and arr2. 
+/*You are provided some code that adds a set of random numbers to both arr1 and arr2.
 Write a function called 'longer' that is given arr1 and arr2 as its only arguments and returns the array that is longer.*/
 var num1 = Math.floor(Math.random() * (30 - 0) + 0);
 var num2 = Math.floor(Math.random() * (30 - 0) + 0);
@@ -99,13 +99,13 @@ var longerArray = longer(arr1, arr2);
 
 //Remove and Add Item to Array
 /*Write a function called removeItem with two parameters.
-The first parameter is an array called myGroceryList, and the second is an item to remove from myGroceryList. 
-If the second argument (the item to remove) matches an item in myGroceryList, remove that item from your grocery list 
-Return the new, updated grocery list. 
+The first parameter is an array called myGroceryList, and the second is an item to remove from myGroceryList.
+If the second argument (the item to remove) matches an item in myGroceryList, remove that item from your grocery list
+Return the new, updated grocery list.
 
-Once you do that, write another function called addItem with two parameters. 
-The first is myGroceryList and the second is an item to add to your grocery list. 
-If the item is already in the grocery list, do not add it a second time. 
+Once you do that, write another function called addItem with two parameters.
+The first is myGroceryList and the second is an item to add to your grocery list.
+If the item is already in the grocery list, do not add it a second time.
 If it's not in the list, then add it to the end of the array.
 Return the new list.*/
 function removeItem(myGroceryList, item){
@@ -150,7 +150,7 @@ addItem (['milk', 'bread', 'butter', 'cereal'], 'candy');
 
 
 //Add Ten to given numbers in an Array
-/*Write a function called addTen that is given 'numbers' as it's only argument and returns a 
+/*Write a function called addTen that is given 'numbers' as it's only argument and returns a
 new array after adding ten to each item in numbers.
 *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]*/
 var numbers = [5, '9', 16, 19, '25', '34', 48];
@@ -165,7 +165,7 @@ addTen(numbers);
 
 
 //Arrays: Even Finder by removing odds in array
-/*Write a function named evenFinder that is given nums as it's only argument and removes 
+/*Write a function named evenFinder that is given nums as it's only argument and removes
 all values that aren't even from the given array.*/
 var nums = [1,2,3,6,22,98,45,23,22,12];
 function evenFinder(nums){
@@ -181,7 +181,7 @@ evenFinder(nums);
 
 //Array: Using array.map to change index property
 /*This is another way to find the index of a property in an array of objects.
-The array parameter is an array of objects. Using the array parameter and the 
+The array parameter is an array of objects. Using the array parameter and the
 index variable, update the object email address (.email or ["email"]) to be the newEmail parameter.*/
 function changeEmail(array, value, newEmail) {
     var index = array.map(function(e) {
@@ -189,17 +189,17 @@ function changeEmail(array, value, newEmail) {
     }).indexOf(value);
 
     array[index].email= newEmail;// Code here
-    
+
     return array;
 }
 
 //ARRAY: Fill empty array with strings
 /*Instructions
-For loops are especially useful when combined with arrays. 
-Create an empty array called myArray 
-Then create a function called arrayFiller that takes one parameter (the parameter will be a number). 
-hen fill myArray with the string "item" the number of times indicated by the parameter. 
-Return the filled array. 
+For loops are especially useful when combined with arrays.
+Create an empty array called myArray
+Then create a function called arrayFiller that takes one parameter (the parameter will be a number).
+hen fill myArray with the string "item" the number of times indicated by the parameter.
+Return the filled array.
 For example if I were to call arrayFiller(2) I would expect the return value to be ["item","item"] . */
 var myArray = [];
 function arrayFiller (num) {
@@ -225,7 +225,7 @@ maker();
 
 //ARRAY: Increment numbers in array by 5
 /*Instructions
-Create a function called "looper" that when passed an array of numbers will increment each value in the array by 5 
+Create a function called "looper" that when passed an array of numbers will increment each value in the array by 5
 and then return the updated array.*/
 var numbers = [10, 20, 30, 40, 50, 60];
 function looper(numbers) {
@@ -239,13 +239,13 @@ looper(numbers);
 
 
 /* backWards Array */
-//Below we have a function that will loop over an array in reverse. 
+//Below we have a function that will loop over an array in reverse.
 //What you need to do is add the index to the newArray on every iteration
 function backWards(arr) {
   var newArray = [];
      for (var i = arr.length - 1; i >= 0; i--) {
-       
-        newArray.push(i);// Code here 
+
+        newArray.push(i);// Code here
      }
   return newArray;
  }
@@ -254,7 +254,7 @@ backWards([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 
 /* findInArray */
-//Below we have a  function called 'findInArray' that takes in two parameters, the first representing the 
+//Below we have a  function called 'findInArray' that takes in two parameters, the first representing the
 //array to be searched and the second representing the value to be searched for. Return true if the array has the value
 function findInArray(arr, value) {
   answer = false;
@@ -263,7 +263,7 @@ function findInArray(arr, value) {
         answer = true;
         break;
       }
-  }// Code Here 
+  }// Code Here
 return answer;
 }
 
@@ -271,7 +271,7 @@ findInArray([1, 2, 3, 4, 5], 6);
 
 
 /* Parse string to integer and addTen */
-//This problem is the same as the previous problem, the only difference is that we have both strings and integers in 
+//This problem is the same as the previous problem, the only difference is that we have both strings and integers in
 //our numbers array. You will need to parse the strings into integers before you add ten.
 function addTen(arr) {
   newArr = [];
@@ -284,12 +284,12 @@ function addTen(arr) {
 addTen([1, "2", 3, 4, "5", "6", 7, "8"]);
 
 /* deleteUser object from array of objects */
-//Imagine a world where you have an array of user objects, and you need to delete one of those users. 
+//Imagine a world where you have an array of user objects, and you need to delete one of those users.
 //Inside your if statement, remove the object from the array of objects.
 function deleteUser(array, property, value) {
   for(var i = 0; i < array.length; i++) {
       if(array[i][property] === value) {
-          array.splice( i, 1);// Code Here 
+          array.splice( i, 1);// Code Here
       }
   }
  return array;
@@ -302,7 +302,7 @@ deleteUser([{name: "jon", age: 40}, {name: "Tim", age: 50}, {name: "James", age:
 function updateUserEmail(array, property, value, newEmail) {
   for(var i = 0; i < array.length; i++) {
       if(array[i][property] === value) {
-        array[i][property] = newEmail;// Code Here 
+        array[i][property] = newEmail;// Code Here
       }
   }
   return array;
@@ -310,20 +310,20 @@ function updateUserEmail(array, property, value, newEmail) {
 updateUserEmail([
     {name: "Jon", email: "jon@gmail.com"},
     {name: "Tim", email: "tim@gmail.com"},
-    {name: "George", email: "george@gmail.com"}], 
-    "email", 
-    "tim@gmail.com", 
+    {name: "George", email: "george@gmail.com"}],
+    "email",
+    "tim@gmail.com",
     "timtimtimmy@gmail.com");
 
 
 /* Change Password in array of Objects */
-//On each iteration, check the array index for a property that is equal to the value being passed in. 
+//On each iteration, check the array index for a property that is equal to the value being passed in.
 //If that condition is met, change the object's password property value to equal newPassword.
 function changePassword(array, property, value, newPassword) {
   for(var i = 0; i < array.length; i++ ) {
       if(array[i][property] === value){
         array[i][property] = newPassword;
-      }// Code Here 
+      }// Code Here
   }
   return array;
 }
@@ -337,7 +337,7 @@ changePassword(
 
 /* Update Email property in Array of Objects */
 //This is another way to find the index of a property in an array of objects.
-//The array parameter is an array of objects. 
+//The array parameter is an array of objects.
 //Using the array parameter and the index variable, update the object email address (.email or ["email"]) to be the newEmail parameter.
 
 
@@ -362,7 +362,7 @@ both(arr1, arr2);
 
 
 /* DESCENDING ORDER */
-//Your task is to make a function that can take any non-negative integer as a argument and return it with its digits in descending order. 
+//Your task is to make a function that can take any non-negative integer as a argument and return it with its digits in descending order.
 //Essentially, rearrange the digits to create the highest possible number.
 var number = 1234567890;
 
@@ -377,3 +377,19 @@ function descendingOrder(n){
   return parseInt(sorted2);
 }
 descendingOrder(number);
+
+
+/* INCREMENT A NUMBER  */
+//Create a function called myLoop that takes in two parameters.
+//The first parameter should represent a starting number and the second is how many times the starting number should be incremented.
+//Use a for loop to increment the first parameter a number of times equal to the second parameter.  Then return the modified number.
+//For example, if the first parameter is 3 and the second parameter is 4, the number three should be increased by one each time the
+//for loop runs, and the for loop should run 4 times. This should return the number 7
+function myLoop(num, inc) {
+  for(var i = 0; i < inc; i++) {
+    num++;
+  }
+  return num;
+}
+myLoop(5, 10);
+

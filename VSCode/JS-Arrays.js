@@ -231,7 +231,7 @@ var numbers = [10, 20, 30, 40, 50, 60];
 function looper(numbers) {
   newNum = [];
   for(var i = 0; i < numbers.length; i++) {
-    newNum.push(+numbers[i] + 5);
+    newNum.push(+numbers[i] + 5);  //the + before numbers[i] makes a string into a number, if a number in the array passed in is a string.
   }
   return newNum;
 }

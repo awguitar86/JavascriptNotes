@@ -83,10 +83,10 @@ var solution = jobs.filter(obj => obj.programmer); // the arrow callback functio
 
 //Arrow Function: Problem 8
 //Write a multi-line arrow function called gemInfo that takes in three parameters, a gem type, gem size, and  a gem color. Have the gemInfo function return an abject with the values of those parameters set to these three keys, gemType, gemSize, gemWeight.
-var gemInfo = (type, size, color) => {
-  return {gemType: type, gemSize: size, gemWeight: color};
+var gemInfo = (type, size, weight) => {
+  return {gemType: type, gemSize: size, gemWeight: weight};
 }
-gemInfo("crystal", 10, "blue");
+gemInfo("crystal", 10, "1 pound");
 
 
 //Arrow Function: Problem 9-return even numbers array

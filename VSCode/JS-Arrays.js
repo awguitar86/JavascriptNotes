@@ -132,14 +132,13 @@ function removeItem (myGroceryList, item) {
   for(var i = 0; i < myGroceryList.length; i++){
     if(myGroceryList[i] === item) {
       myGroceryList.splice(i, 1);
-      i--;
     }
   }
   return myGroceryList;
 }
 function addItem (myGroceryList, item) {
   for(var i = 0; i < myGroceryList.length; i++) {
-    if (myGroceryList.indexOf(item) < 0) {
+    if (myGroceryList.indexOf(item) < 0) {  //indexOf return -1 if the value in the array is not found. It returns 0 if it is found.
       myGroceryList.push(item);
     }
   }

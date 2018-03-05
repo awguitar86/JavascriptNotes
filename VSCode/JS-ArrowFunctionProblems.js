@@ -99,11 +99,11 @@ evens(numbers);
 
 //Arrow Function: Problem 10 - return strings with first letter A with .filter method
 //Inside the startWithLetterA function use the built in filter method to filter over the array called strings and return a new array with only the strings that start with a letter "a". Make sure to use the arrow function combined with the filter method.
-var strings = ["cool", "awesome", "amazaing", "rad", "sweet"];
+var strings = ['Austin', 'awesome', 'cool', 'hello', 'love', 'amazing'];
 
-var startWithLetterA = (arr) => strings.filter(string => string[0] === "a");
+var startWithLetterA = (arr) => strings.filter(string => string[0].toLowerCase() === 'a');
 
-startWithLetterA(strings);
+startWithLetterA(strings); // [ 'Austin', 'awesome', 'amazing' ]
 
 //Arrow Function: Problem 11 - Return new array with .map method
 //Inside the formalGreeting function use the built in .map method to map over the array called names and return a new array with "Hello, " appended to the beginning of each name. Make sure to use the arrow function combined with the filter method.

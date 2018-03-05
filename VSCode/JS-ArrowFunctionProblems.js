@@ -5,7 +5,7 @@
 var isGreaterThanTwenty = (num) => {
   var answer = num > 20 ? true : false;
   return answer;
-  } 
+  }
 isGreaterThanTwenty(25);
 
 //Arrow Function: Return the number 7
@@ -14,8 +14,12 @@ var seven = () => {
   return 7;
 }
 seven();
+//OR
+var seven = () => 7;
 
-//Arrow Function: Re-write ES5 functions in to arrow functions 
+seven();
+
+//Arrow Function: Re-write ES5 functions in to arrow functions
 //Re-write the ES5 functions provided as ES6 arrow functions. Name your functions the same as the ES5 versions provided.
 	//•	You should not use the ES5 function declaration syntax in your final solution.
 	//•	Be sure to call the functions the same name as in the ES5 syntax functions.
@@ -52,7 +56,7 @@ multiply(4, 6);
 
 
 //Arrow Function: Greater than 20 function
-//Create an ES6 multi-line arrow function called isGreaterThanTwenty that will take in a number parameters and return true if the parameter is greater than twenty. The function should return false otherwise. 
+//Create an ES6 multi-line arrow function called isGreaterThanTwenty that will take in a number parameters and return true if the parameter is greater than twenty. The function should return false otherwise.
 var isGreaterThanTwenty = (num) => {
   if (num > 21){
     return true;
@@ -63,7 +67,7 @@ var isGreaterThanTwenty = (num) => {
 isGreaterThanTwenty(25);
 
 //Arrow Function: Add function
-//Create an ES6 arrow function called add that will take in two parameters, both numbers. The function will need to add the two parameters passed in. 
+//Create an ES6 arrow function called add that will take in two parameters, both numbers. The function will need to add the two parameters passed in.
 var add = (num1, num2) => {
   return num1 + num2;
 }
@@ -71,7 +75,7 @@ add(200, 400);
 
 //Arrow Function: Filter with arrow function
 //Use the built in filter method to filter over the jobs array of objects and return the object of the person with a job as a programmer. Make sure to use the arrow function in conjunction with the filter method.
-var jobs = [{receptionist: "James"}, 
+var jobs = [{receptionist: "James"},
             {programmer: "Steve"},
             {designer: "Alicia"}];
 
@@ -94,15 +98,15 @@ var evens = (arr) => numbers.filter(nums => nums % 2 === 0);
 evens(numbers);
 
 //Arrow Function: Problem 10 - return strings with first letter A with .filter method
-//Inside the startWithLetterA function use the built in filter method to filter over the array called strings and return a new array with only the strings that start with a letter "a". Make sure to use the arrow function combined with the filter method. 
+//Inside the startWithLetterA function use the built in filter method to filter over the array called strings and return a new array with only the strings that start with a letter "a". Make sure to use the arrow function combined with the filter method.
 var strings = ["cool", "awesome", "amazaing", "rad", "sweet"];
 
 var startWithLetterA = (arr) => strings.filter(string => string[0] === "a");
 
 startWithLetterA(strings);
 
-//Arrow Function: Problem 11 - Return new array with .map method 
-//Inside the formalGreeting function use the built in .map method to map over the array called names and return a new array with "Hello, " appended to the beginning of each name. Make sure to use the arrow function combined with the filter method. 
+//Arrow Function: Problem 11 - Return new array with .map method
+//Inside the formalGreeting function use the built in .map method to map over the array called names and return a new array with "Hello, " appended to the beginning of each name. Make sure to use the arrow function combined with the filter method.
 var names = ["Ted", "George", "Caroline", "Harold"];
 
 var formalGreeting = (arr) => names.map(greet => "Hello, " + greet);

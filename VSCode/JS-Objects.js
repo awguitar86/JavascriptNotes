@@ -1,7 +1,7 @@
 //OBJECTS
 
 //Person Object With Name and Age Property
-/*Create a function called getPerson. 
+/*Create a function called getPerson.
 Inside that function, create a person object with a name property (string) and an age property (number) and return it.*/
 function getPerson(){
   var person = {name:"John", age:30};
@@ -10,7 +10,7 @@ function getPerson(){
 getPerson();
 
 //Car object with Make and Model Properties
-/*Create a newCar function that takes in two parameters: make and model.  
+/*Create a newCar function that takes in two parameters: make and model.
 Using those parameters, create a car object, give it make and model properties, and return it from the function*/
 function newCar(make, model){
   var car = {make: make, model: model};
@@ -19,9 +19,9 @@ function newCar(make, model){
 newCar("Ford", "F-150");
 
 //Person Object that has Name and Age Property
-/*Create a function called canDrive that takes in a person object that has a name and an age property. 
-If the person's age is greater than or equal to 16 then return a string concatenating their name with the 
-string " is old enough to drive." If the person's age is less than 16 then return a string concatenating 
+/*Create a function called canDrive that takes in a person object that has a name and an age property.
+If the person's age is greater than or equal to 16 then return a string concatenating their name with the
+string " is old enough to drive." If the person's age is less than 16 then return a string concatenating
 their name with the string " is not old enough to drive.”*/
 function canDrive(person){
   if (person.age >= 16){
@@ -40,8 +40,8 @@ canDrive({name:"Ted", age: 32});
 
 
 //Change Email Function with User Object
-/*Create a function called changeEmail that takes in a user object and a newEmail string. 
-Replace the user's current email address (assigned to the email property) with the newEmail 
+/*Create a function called changeEmail that takes in a user object and a newEmail string.
+Replace the user's current email address (assigned to the email property) with the newEmail
 string, then return the updated user object.*/
 var user = {name: "Rumpelstiltskin", email: "guessmyname@gmail.com"};
 function changeEmail (user, newEmail) {
@@ -57,9 +57,9 @@ function changeEmail(user, newEmail) {
 changeEmail({name:"Giff", email:'giffygiff@gmail.com'}, 'gifford@gmail.com');
 
 //Change User Object Role in a Function
-/*Create a function called addRole that takes in a user object and a string. 
-This string will represent the user's new role in the system (i.e. admin, 
-creator, editor, visitor). Create a new property on the user object called 
+/*Create a function called addRole that takes in a user object and a string.
+This string will represent the user's new role in the system (i.e. admin,
+creator, editor, visitor). Create a new property on the user object called
 "role" and assign the passed in string to it, then return the updated user object.*/
 var user = {name:"Peter Pan", role:"boy"}
 function addRole(user, string){
@@ -75,7 +75,7 @@ function addRole(user, string){
 addRole({name:"Tobias"}, "musician");
 
 //Remove Role Object Property with Function
-/*Create a function called removeRole that takes in a user object. 
+/*Create a function called removeRole that takes in a user object.
 Delete the user's role property and return the updated user.*/
 var user = {name:"Bruce Wayne", role:"Batman"};
 function removeRole(user){
@@ -85,15 +85,15 @@ function removeRole(user){
 removeRole(user);
 
 //Change all Object Property Values to Unknown with Loop in a Function
-/*Create a function called unknownPerson that takes in a person object. 
-This person object will have properties such as name, age, gender, etc. 
-Loop through all the properties of the object and set each value to "Unknown", then return the object. 
+/*Create a function called unknownPerson that takes in a person object.
+This person object will have properties such as name, age, gender, etc.
+Loop through all the properties of the object and set each value to "Unknown", then return the object.
 For example, if "person" is {name: "Dolph L.", age: 33} then the function would return {name: "Unknown", age: “Unknown"}.*/
 var person = {name:"Sheldon Cooper", age:35, gender: "male", job:"Physicist"}
 function unknownPerson(person){
-  for (var prop in person){ // for/in loops through object 
+  for (var prop in person){ // for/in loops through object
     if (person.hasOwnProperty(prop)){ // hasOwnProperty method returns a boolean indicating whether the object has the specified property as own (not inherited) property.
-      person[prop] = "Unknown";
+      person[prop] = "Unknown"; // use bracket notation when using the for/in loop and using prop for each piece of the object.
     }
   }
   return person;
@@ -101,9 +101,9 @@ function unknownPerson(person){
 unknownPerson(person);
 
 //Truthy Object
-/*Create a function called truthyObject that takes in a user object. 
-This function should loop through the user object checking to make sure that each of its values is truthy. 
-If a value is not truthy then remove it from the object. 
+/*Create a function called truthyObject that takes in a user object.
+This function should loop through the user object checking to make sure that each of its values is truthy.
+If a value is not truthy then remove it from the object.
 Return the updated object after looping through it.*/
 function truthyObject (user){
   for (const prop in user){
@@ -116,7 +116,7 @@ function truthyObject (user){
 truthyObject({name:"Dwight", age:45, job:false});
 
 //Loop Through Object and Change values
-/*Below we have a function called objectLooper that will take a number object and loop over it. 
+/*Below we have a function called objectLooper that will take a number object and loop over it.
 You need to change the value of each property to 0.*/
 var number = {
     age: 30,
@@ -176,7 +176,7 @@ cleanUser(user);
 
 
 //Object: Change values of object elements
-/*Change the value of name to Ryan, change the value of pwHash to 43df90w_h and change the value of 
+/*Change the value of name to Ryan, change the value of pwHash to 43df90w_h and change the value of
 username to ryanleeeallred. After you have updated all the values return the new object*/
 var user = {
     name: 'Sally Rally',
@@ -186,7 +186,7 @@ var user = {
 function personalize(user) {
    user.name = "Ryan";
    user.pwHash = "43df90w_h";
-   user.username = "ryanleeeallred"; 
+   user.username = "ryanleeeallred";
    return user;
 }
 personalize(user);
@@ -205,7 +205,7 @@ updateEmail(obj, 'awesome@gmail.com');
 
 
 //Object: Check if person object is old enough
-/*Write a function called isOldEnough that takes a person obj and checks if the person is old enough to enter the club. 
+/*Write a function called isOldEnough that takes a person obj and checks if the person is old enough to enter the club.
  If they are 21 or older return true else return false.  The person's age can be found on the age property/key.*/
 var person = {age: 20};
 function isOldEnough (person){
@@ -222,9 +222,9 @@ isOldEnough(person);
 
 
 //Object: add role to user object
-/*Create a function called addRole that takes in a user object and a string. 
+/*Create a function called addRole that takes in a user object and a string.
 This string will represent the user's new role in the system (i.e. admin, creator, editor, visitor).
-Create a new property on the user object called "role" and assign the passed in string to it, then 
+Create a new property on the user object called "role" and assign the passed in string to it, then
 return the updated obj.role. Make sure you only return the obj.role otherwise the test will fail.*/
 	var obj = {name: "john", age: 30};
 
@@ -235,12 +235,12 @@ return the updated obj.role. Make sure you only return the obj.role otherwise th
 	addRole(obj, "Creator" );
 
 //Object: Zero out property values in object
-/*Create a function called zeroOut that take a user object and then loops over that object and changes 
+/*Create a function called zeroOut that take a user object and then loops over that object and changes
 all the values to 0. Return the user object at the end.*/
 var obj = {
   name: "tim",
   age: 34,
-  job: "driver" 
+  job: "driver"
 };
 function zeroOut(obj){
   for (var key in obj){

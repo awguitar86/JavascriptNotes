@@ -107,7 +107,7 @@ If a value is not truthy then remove it from the object.
 Return the updated object after looping through it.*/
 function truthyObject (user){
   for (const prop in user){
-    if (!user[prop]){ //need to use brackets when doing this type of function and if statement.
+    if (!user[prop]){ //need to use brackets when doing this type of function and if statement. The ! before the object checks to see if it is truthy.
       delete user[prop];
       }
   }

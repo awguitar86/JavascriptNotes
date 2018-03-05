@@ -78,8 +78,8 @@ add(200, 400);
 var jobs = [{receptionist: "James"},
             {programmer: "Steve"},
             {designer: "Alicia"}];
-
-var solution = jobs.filter(obj => obj.programmer);
+// filter() method created a new array with all elements that pass the test implemented by the provided function.
+var solution = jobs.filter(obj => obj.programmer); // the arrow callback function is used inside the filter method not on the solution variable.
 
 //Arrow Function: Problem 8
 //Write a multi-line arrow function called gemInfo that takes in three parameters, a gem type, gem size, and  a gem color. Have the gemInfo function return an abject with the values of those parameters set to these three keys, gemType, gemSize, gemWeight.

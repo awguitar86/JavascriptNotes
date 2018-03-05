@@ -1,7 +1,7 @@
 //JAVASCRIPT 3 VIDEO NOTES
 
 //Prototypes
-/*This way is not good because there is duplication here. We're being 
+/*This way is not good because there is duplication here. We're being
 redundant and wasting spave here. It's not memory efficiant.*/
 function Dog (){
     this.legs = 4;
@@ -63,7 +63,7 @@ Array.prototype.pop = function(){
     .pop()
     .shift()
     .reverse()
-These are the native built in prototypes, and when we use them in a function like 
+These are the native built in prototypes, and when we use them in a function like
 the above function Array.prototype.pop, we override the native built-in prototype
 which is bad practice and makes things confusing. Instead go for new unique prototypes
 that won't confuse people.
@@ -79,7 +79,7 @@ Dog.prototype.bark = function(){
 };
 var daschund = new Dog();
 
-/*Invoke methods on prototype as if they were properties of the object itself. 
+/*Invoke methods on prototype as if they were properties of the object itself.
 Javscript will search first for a method in the object, then look to the prototype.*/
 daschund.bark();
 
@@ -138,3 +138,21 @@ var oak = new Tree(10);
 oak.grow();
 
 oak
+
+/* ARRAYS - MORE METHODS */
+// indexOf: a method on arrays that finds the first instance of a value.
+array.indexOf('a'); // if the value is not found, indexOf will return -1.
+
+// forEach: a method on arrays that allows you to run a function based on each element.
+array.forEach(function(val, i, arr){ // val = value of current element
+})                          // i = index of current element    arr = array the method is called on
+
+// map: method on arrays that creates a new array based on the original array.
+array.map(function(element) { // element = the current element
+    return element; // make adjustments to elements here
+}) // returns a new array
+
+// filter: method on arrays that creates a new array of only elements that passs criteria
+array.filter(function(val, i, arr){ // val = vaslue of the current element.     i = index of current element    arr = array the method is called on
+    return true; // if true is returned, the element will be included in the new array
+}) // returns the filtered copy of the array

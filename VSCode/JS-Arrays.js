@@ -392,3 +392,34 @@ function myLoop(num, inc) {
 }
 myLoop(5, 10);
 
+
+/* EDITING, ADDING, AND REMOVING FROM ARRAY */
+// Using this array do the following
+var heroes = ['superman', 'batman', 'flash'];
+// add 'wonderwoman' to the end
+// remove 'superman' and store him in a variable called firstHero
+// add 'spongebob' to the start of the array
+// remove 'flash' from the array and store him in a variable called secondHero
+// leave batman in the array but put a copy of him on a variable called thirdHero
+var firstHero = heroes.shift();
+var secondHero = heroes.pop();
+var thirdHero = heroes.slice(0, 1)[0];
+heroes.push('wonderwoman');
+heroes.unshift('spongebob');
+
+
+/* REMOVE ALL INSTANCES IN ARRAY */
+// Write a function called removeItem that takes in an array of strings, and a string.
+// Removes all instances of that string from the array. And return the modified array.
+// The order of the array should not be changed
+function removeItem(arr, str){
+	for(var i = arr.length - 1; i >= 0; i--){
+		if(arr[i] === str){
+			arr.splice(i, 1);
+		}
+	}
+	return arr;
+}
+removeItem(['hello', 'cool', 'done', 'awesome'], 'cool');
+
+

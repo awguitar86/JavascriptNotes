@@ -2,7 +2,7 @@
 
 //Callback Problem 1
 /*Create a function called outerFn, that takes in a callback as a parameter, and then returns that callback invoked.
-To see it working, invoke outerFn at the bottom, passing in the InnerFn as the callback. You should now see 
+To see it working, invoke outerFn at the bottom, passing in the InnerFn as the callback. You should now see
 "The innerFn is a callback!" in the console.*/
 var outerFn = (callback) => {
   return callback();
@@ -93,3 +93,18 @@ var filter = (arr, cb) => {
   return cb(arr);
 }
 filter(ages,checkAge);
+
+
+/* SIMPLE CALLBACK */
+// Create a function called callerBack that takes in a function (holla) and a string parameter(back) and invokes it(holla)
+// with the argument string(back) + ' back'."
+// example - If I call you with 'Give it' you should invoke holla with 'Give it back'
+function callerBack(func, str){
+	return func(str + ' back');
+}
+
+function holla(str){
+	return str;
+}
+
+

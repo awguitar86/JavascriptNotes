@@ -252,3 +252,38 @@ function zeroOut(obj){
 }
 zeroOut(obj);
 
+
+/* REMOVING KEYS IN OBJECT */
+// Loop through this object and change all keys that start with the letter s to have a value of 's'
+var snake = {
+	sliters: 'sideways',
+	eats: 'rodents',
+	says: 'ssss',
+	smells: 'heat',
+	runs: 'legless'
+};
+
+function snakeLoop(obj){
+	for(var prop in obj){
+		if(prop.startsWith('s')){
+			obj[prop] = 's';
+		}
+	}
+	return obj;
+}
+snakeLoop(snake);
+
+
+/* OBJECT WITH TIMESTAMP */
+// Write a function called makeChatMessage that takes in a message and author as parameters
+// and returns an object with a message, author, and timestamp, that is
+// the current time as a Date object
+function makeChatMessage(message, author){
+	return {
+		message: message,
+		author: author,
+		timestamp: new Date()
+	}
+}
+
+

@@ -1,4 +1,14 @@
-/* CLOSURES - WHY ARE THEY USEFUL? */
+/* CLOSURES */
+/* WHAT ARE CLOSURES */
+
+function tracker(){
+    var count = 0;
+    return function(){
+        count++;
+    }
+}
+
+/* WHY ARE THEY USEFUL? */
 // Closures can help us keep data secure
 
 function  bankAccount (startingBalance) {
@@ -42,3 +52,4 @@ function getSuppliesFromTown (supplyList) {
         memryClosure(i)
     }
 }
+

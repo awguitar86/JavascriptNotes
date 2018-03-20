@@ -240,32 +240,27 @@ looper(numbers);
 /* backWards Array */
 //Below we have a function that will loop over an array in reverse.
 //What you need to do is add the index to the newArray on every iteration
-function backWards(arr) {
+function backWards( arr ) {
   var newArray = [];
-     for (var i = arr.length - 1; i >= 0; i--) {
-
-        newArray.push(i);// Code here
-     }
+  for( var i = arr.length - 1; i >= 0; i-- ) {
+    newArray.push( arr[i] ); //make sure to not just do i but to do arr[i] to get the actual value of each index, not the index itself.
+  }
   return newArray;
- }
-
-backWards([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+}
+backWards( [1, 2, 3, 4, 5] );
 
 
 /* findInArray */
 //Below we have a  function called 'findInArray' that takes in two parameters, the first representing the
 //array to be searched and the second representing the value to be searched for. Return true if the array has the value
 function findInArray(arr, value) {
-  answer = false;
   for(var i = 0; i < arr.length; i++){
     if(arr[i] === value){
-        answer = true;
-        break;
+      return true;
       }
-  }// Code Here
-return answer;
+  }
+return false;
 }
-
 findInArray([1, 2, 3, 4, 5], 6);
 
 
@@ -281,6 +276,15 @@ function addTen(arr) {
   return newArr;
 }
 addTen([1, "2", 3, 4, "5", "6", 7, "8"]);
+// OR DO IT THIS WAY
+function addTen( arr ) {
+  var newArr = [];
+  for( var i = 0; i < arr.length; i++ ) {
+    newArr.push(+arr[i] + 10);
+  }
+  return newArr;
+}
+addTen([1, 2, "3", 4, 5, 6, "7", 8, "100"]); //[11, 12, 13, 14, 15, 16, 17, 18, 110]
 
 /* deleteUser object from array of objects */
 //Imagine a world where you have an array of user objects, and you need to delete one of those users.

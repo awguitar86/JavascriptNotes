@@ -426,4 +426,8 @@ function removeItem(arr, str){
 }
 removeItem(['hello', 'cool', 'done', 'awesome'], 'cool');
 
+/* Convert Binary */
+// Given an array of one's and zero's convert the equivalent binary value to an integer.
+// Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1
+const binaryArrayToNumber = arr => parseInt(arr.join(''), 2);  //the 2 is the radix that represents the numeral system to be used.
 

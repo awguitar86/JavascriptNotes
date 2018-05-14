@@ -133,4 +133,106 @@ function doubleTheFun(param){
 	}
 }
 
+/* Is this a triangle? */
+//Implement a method that accepts 3 integer values a, b, c. The method should return true if a triangle
+//can be built with the sides of given length and false in any other case.
+//(In this case, all triangles must have surface greater than 0 to be accepted).
+function isTriangle(a,b,c){
+  if(a+b > c && b+c > a && c+a > b){
+    return true;
+  }
+  else{
+     return false;
+   }
+}
+isTriangle(1, 2, 2);
 
+/* Determine is square number */
+// Given an integral number, determine if it's a square number
+var isSquare = function(n){
+  if(Math.sqrt(n) % 1 === 0){
+    return true;
+  }
+    return false; // fix me
+}
+isSquare(26);
+
+
+/* Dubstep */
+//The input consists of a single non-empty string, consisting only of uppercase English letters, the string's length doesn't exceed 200 characters
+//Return the words of the initial song that Polycarpus used to make a dubsteb remix. Separate the words with a space.
+function songDecoder(song){
+  let arr = song.split("WUB");
+  let leftOver = [];
+  let answer = '';
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] !== ""){
+      leftOver.push(arr[i]);
+    }
+  }
+  answer = leftOver.join(' ');
+  return answer;
+}
+songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB");
+
+
+/* DNA */
+// in the dna string, replace A with T, T with A, G with C, and C with G.
+function DNAStrand(dna){
+  let answer = '';
+  for(let i = 0; i < dna.length; i++){
+    switch(dna[i]){
+      case 'A':
+        answer += 'T';
+        break;
+      case 'T':
+        answer += 'A';
+        break;
+      case 'G':
+        answer += 'C';
+        break;
+      case 'C':
+        answer += 'G';
+        break;
+    }
+  }
+  return answer;
+}
+DNAStrand("ATTGC");
+/* OR */
+var pairs = {
+  A:'T',
+  T:'A',
+  C:'G',
+  G:'C'
+};
+
+function DNAStrand(dna){
+  return dna.split('').map( letter => {
+    return pairs[letter]
+  }).join('');
+}
+DNAStrand('TAACG');
+
+
+/* Find Unique Number */
+// There is an array with some numbers. All numbers are equal except for one. Try to find it!
+// It’s guaranteed that array contains more than 3 numbers.
+function findUniq(arr) {
+  let sortArr = arr.sort();
+  let num1 = sortArr[0];
+  let num2 = sortArr[sortArr.length - 1];
+
+  if(sortArr[1] == num1){
+    return num2;
+  }else {
+    return num1;
+  }
+ }
+ findUniq([1, 1, 5, 1, 1, 1]);
+/* OR */
+function findUniq(arr) {
+  arr.sort((a,b)=>a-b);
+  return arr[0]==arr[1]?arr.pop():arr[0]
+}
+findUniq([1, 1, 6]);

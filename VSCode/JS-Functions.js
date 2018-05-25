@@ -236,3 +236,32 @@ function findUniq(arr) {
   return arr[0]==arr[1]?arr.pop():arr[0]
 }
 findUniq([1, 1, 6]);
+
+
+/* Checking Coupon Code */
+//Write a function called checkCoupon to verify that a coupon is valid and not expired. If the coupon is good, return true. Otherwise, return false.
+//A coupon expires at the END of the expiration date. All dates will be passed in as strings in this format: "June 15, 2014"
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  let cDate = Date.parse(currentDate);
+  let xDate = Date.parse(expirationDate);
+  if(enteredCode === correctCode && xDate >= cDate){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+
+/* Sort Array by String Length */
+//Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings,
+//ordered from shortest to longest.
+function sortByLength (array) {
+  array.sort(function(a,b) {
+    return a.length - b.length;
+  })
+  return array;
+};
+sortByLength(['awesome', 'cool', 'it', 'fantastic', 'rad']);
+
+

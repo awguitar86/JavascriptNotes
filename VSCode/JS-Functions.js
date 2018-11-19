@@ -265,3 +265,64 @@ function sortByLength (array) {
 sortByLength(['awesome', 'cool', 'it', 'fantastic', 'rad']);
 
 
+let array1 = [{_id: 1 }, {_id: 2 }, {_id: 3 }, {_id: 4 }];
+let array2 = [{_id: 1}, {_id:2 }, {_id: 3}, {_id:4}, {_id: 5}];
+
+function arrayCheck (arr1, arr2) {
+  for(let i = 0; i < arr1.length; i++){
+    for(let z = 0; z < arr2.length; z++){
+      if( arr2[z].id === arr1[i].id ){
+          return ( <div>match</div>);
+      }
+      else {
+        return (<div> no match </div>);
+      }
+    }
+  }
+}
+
+
+/* IS ANAGRAM */
+// function isAnagram(str1, str2){
+//  return str1.split('').sort().join('') === str2.split('').sort().join('');
+// }
+
+function isAnagram(str1, str2){
+	let dictionary = {};
+  let answer;
+  for(let i = 0; i < str1.length; i++){ //i=0
+  		if(dictionary[str1[i]]) {
+      	dictionary[str1[i]]++;
+      }
+      else {
+      	dictionary[str1[i]] = 1; // dictionary[t] = 1 -> dictionary = {'t':1}
+      }
+  }
+  console.log(dictionary);
+  for(let i = 0; i < str2.length; i++){
+    if(dictionary[str2[i]]){
+      dictionary[str2[i]]--;
+    }
+  }
+  console.log(dictionary);
+  for(let x in dictionary){
+    if(dictionary[x] === 0){
+      delete dictionary[x];
+    }
+  }
+  console.log(dictionary);
+    if(Object.keys(dictionary).length === 0){
+      answer = true;
+    }
+    else {
+      answer = false;
+    }
+  return answer;
+}
+
+isAnagram("test", "stet");
+
+  // loop over string2 and decrement the values in dictionary1
+  		//if value === 0 -> delete it
+
+  // check that no keys in the dictionary

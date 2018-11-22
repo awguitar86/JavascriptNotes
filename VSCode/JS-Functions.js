@@ -319,10 +319,41 @@ function isAnagram(str1, str2){
     }
   return answer;
 }
-
 isAnagram("test", "stet");
-
   // loop over string2 and decrement the values in dictionary1
   		//if value === 0 -> delete it
-
   // check that no keys in the dictionary
+
+
+/* SUM OF TWO LOWEST POSITIVE INTEGERS */
+// Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 integers. No floats or empty arrays will be passed.
+// For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+var arr = [19, 5, 42, 2, 77];
+function sumTwoSmallestNumbers(numbers) {
+    let result = numbers.sort((a, b) => a - b);
+    return result[0] + result[1];
+};
+sumTwoSmallestNumbers(arr);
+
+
+/* COUNT LOST SHEEP */
+// Every week (Friday and Saturday night), the farmer and his son count amount of sheep returned to the yard of their farm.
+// They count sheep on Friday night, the same goes for Saturday (suppose that sheep returned on Friday are not feeding back on hills on Saturday).
+// As sheep are not coming in one flock, you will be given two arrays (one for each night) representing number of sheep as they were returning to the yard during the evenings (entries are positive ints, higher than zero).
+// Farmer and his son know the total amount of their sheep, you will be given this number as third parameter.
+// Your goal is to calculate the amount of sheep lost (not returned) to the farm after Saturday night counting.
+// Example 1: Input: {1, 2}, {3, 4}, 15 --> Output: 5
+// Example 2: Input: {3, 1, 2}, {4, 5}, 21 --> Output: 6
+function lostSheep(friday,saturday,total){
+  return friday.concat(saturday).reduce((s,l)=>s-l,total)
+}
+// OR
+function lostSheep(friday,saturday,total){
+  if(friday.length > 0){
+    friday = friday.reduce(getSum);
+  }
+  if(saturday.length > 0){
+    saturday = saturday.reduce(getSum);
+  }
+  return total - (friday + saturday);
+}

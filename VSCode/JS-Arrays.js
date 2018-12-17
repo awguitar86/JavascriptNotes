@@ -431,3 +431,62 @@ removeItem(['hello', 'cool', 'done', 'awesome'], 'cool');
 // Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1
 const binaryArrayToNumber = arr => parseInt(arr.join(''), 2);  //the 2 is the radix that represents the numeral system to be used.
 
+
+/* NUMBER OF PEOPLE IN THE BUS */
+// There is a bus moving in the city, and it takes and drop some people in each bus stop.
+// You are provided with a list (or array) of integer arrays (or tuples). Each integer array has two items which represent number of people get into bus (The first item) and number of people get off the bus (The second item) in a bus stop.
+// Your task is to return number of people who are still in the bus after the last bus station (after the last array). Even though it is the last bus stop, the bus is not empty and some people are still in the bus, and they are probably sleeping there :D
+// Take a look on the test cases.
+// Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the return integer can't be negative.
+// The second value in the first integer array is 0, since the bus is empty in the first bus stop.
+var busArr = [[10,0],[3,5],[5,8]];
+var number = function(busStops){
+  let totalPeeps = 0;
+  for(let i = 0; i < busStops.length; i++){
+    totalPeeps += busStops[i][0];
+    totalPeeps -= busStops[i][1];
+  }
+  return totalPeeps;
+}
+number(busArr); // returns 5
+
+
+/* REGEX VALIDATE PIN CODE */
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+// If the function is passed a valid PIN string, return true, else return false.
+var pin = "124202";
+function validatePIN(pin){
+  let answer;
+ if(/^\d+$/.test(pin)){
+   pin.length === 4 || pin.length === 6 ? answer = true : answer = false;
+ }
+ else {
+   answer = false;
+ }
+ return answer;
+}
+validatePIN(pin);
+// OR
+function validatePIN(pin) {
+  return /^(\d{4}|\d{6})$/.test(pin)
+}
+// OR
+function validatePIN (pin) {
+  return  (pin.length == 4 || pin.length == 6) && parseInt(pin) == pin
+}
+
+
+/* SORTED? YES? NO? HOW? */
+// Complete the method which accepts an array of integers, and returns one of the following:
+// "yes, ascending" - if the numbers in the array are sorted in an ascending order
+// "yes, descending" - if the numbers in the array are sorted in a descending order
+// "no" - otherwise
+// You can assume the array will always be valid, and there will always be one correct answer.
+var arr = [80, 40, 55, 18, 24, 6, 0];
+function isSortedAndHow(arr) {
+  return arr.every((x,i)=>i==0||arr[i]>=arr[i-1])?'yes, ascending':
+         arr.every((x,i)=>i==0||arr[i]<=arr[i-1])?'yes, descending':'no'
+}
+isSortedAndHow(arr); // outputs "yes, descending"
+
+

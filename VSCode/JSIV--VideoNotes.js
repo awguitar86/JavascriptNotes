@@ -46,7 +46,7 @@ function getSuppliesFromTown (supplyList) {
     for(var i =0; i < supplyList.length; i++){
         function memoryClosure(supplyIndex){
             goGetFromTown(supplyList[supplyIndex], function(){
-                supplyList[supplyIndex] === //correct value
+                supplyList[supplyIndex] // === correct value
             })
         }
         memryClosure(i)
